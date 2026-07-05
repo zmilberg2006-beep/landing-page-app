@@ -1,5 +1,6 @@
 import { supabase, LandingData } from '@/lib/supabase'
 import LandingPageView from '@/components/LandingPageView'
+import CakePortalScroll from '@/components/CakePortalScroll'
 
 export const revalidate = 60
 
@@ -49,5 +50,10 @@ export default async function LandingPage({
     if (data) pageData = { ...DEFAULTS, ...data }
   } catch { /* Supabase unreachable */ }
 
-  return <LandingPageView data={pageData} editMode={editMode} />
+  return (
+    <>
+      <LandingPageView data={pageData} editMode={editMode} />
+      <CakePortalScroll />
+    </>
+  )
 }
