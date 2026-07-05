@@ -52,8 +52,8 @@ export default async function LandingPage({
 
   return (
     <>
-      <LandingPageView data={pageData} editMode={editMode} />
       <CakePortalScroll />
+      <LandingPageView data={pageData} editMode={editMode} />
     </>
   )
 }
